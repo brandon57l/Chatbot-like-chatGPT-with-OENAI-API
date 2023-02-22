@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../material-messaging-app-concept"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "material-messaging-app-concept"
+	}
+}

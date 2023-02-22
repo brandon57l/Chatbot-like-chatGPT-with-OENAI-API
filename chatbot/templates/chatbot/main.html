@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'css/bootstrap.min.css' %}" crossorigin="anonymous"></script>
+
+{% include "chatbot/pop.html" %}
+</head>
+<body>
+    {% block content %}
+    {% endblock content %}
+</body>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js">
+    
+<script src="{% static 'js\bootstrap.min.js' %}" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+<script src="{% static 'js\bootstrap.bundle.min.js' %}" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+<script src="{% static 'js/script.js' %}"></script>
+</html>

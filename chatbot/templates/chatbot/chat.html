@@ -1,0 +1,37 @@
+{% extends 'chatbot/main.html' %}
+{% load static %}
+
+{% block content %}
+{% comment %} <button onclick="fetchData()">Récupérer les données</button> {% endcomment %}
+{% comment %} <div class="main-container">
+    <div class="chat-container">
+        <div id="msg-container" class="msg-container">
+            <div class="msg-left">Bonjour et bienvenue au Le Karousel. Je suis votre conseiller virtuel, prêt à vous aider à faire le meilleur choix parmi nos plats et boissons. Qu'aimeriez-vous manger aujourd'hui? Vous pouvez me dire ce que vous avez envie de manger ou me poser des questions sur nos plats et nos boissons.</div>
+        </div>
+        <form method="post" id="user_input">
+            {% csrf_token %}
+            <textarea id="text" name="text"></textarea>
+            <button onclick="fetchData(event)" id="submit-msg" class="submit-msg" type="submit">Send</button>
+        </form>
+    </div>
+</div> {% endcomment %}
+
+{% comment %} <script type="text/javascript">
+    $(document).on('submit','#user_input',function(e){
+        e.preventDefault();
+        $.ajax({
+            type:'POST',
+            url:'{% url "chat" %}',
+            data:
+            {
+                text:$("#text").val(),
+                csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+            },
+            success:function(){
+                  alert('OK - 200');
+                    }
+            })
+        });
+    </script> {% endcomment %}
+
+{% endblock content %}
